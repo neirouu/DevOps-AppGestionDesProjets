@@ -40,7 +40,7 @@ pipeline {
     post {
         failure {
             emailext(
-                to: 'TON_EMAIL@example.com',
+                to: 'neirouz.ghabri@esprit.tn',
                 subject: "ECHEC Jenkins - ${JOB_NAME}",
                 body: """
                 Bonjour,
