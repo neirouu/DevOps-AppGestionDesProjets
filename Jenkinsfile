@@ -36,24 +36,4 @@ pipeline {
             }
         }
     }
-
-    post {
-        failure {
-            emailext(
-                to: 'neirouz.ghabri@esprit.tn',
-                subject: "ECHEC Jenkins - ${JOB_NAME}",
-                body: """
-                Bonjour,
-
-                La construction du backend a échoué.
-
-                Projet : ${JOB_NAME}
-                Build : ${BUILD_NUMBER}
-                URL : ${BUILD_URL}
-
-                Consultez Jenkins pour voir les erreurs.
-                """
-            )
-        }
-    }
 }
